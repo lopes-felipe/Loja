@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VerityModelo" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Pedido">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cliente" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PrecoTotal" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="PedidoLinhas" Relationship="Self.FK_PedidoLinha_Pedido" FromRole="Pedido" ToRole="PedidoLinha" />
+    <Property Name="DataPedido" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="PedidoLinha">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PedidoID" Type="Int64" Nullable="false" />
+    <Property Name="ProdutoID" Type="Int64" Nullable="false" />
+    <Property Name="Quantidade" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Pedido" Relationship="Self.FK_PedidoLinha_Pedido" FromRole="PedidoLinha" ToRole="Pedido" />
+    <NavigationProperty Name="Produto" Relationship="Self.FK_PedidoLinha_Produto" FromRole="PedidoLinha" ToRole="Produto" />
+    <Property Name="Preco" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Descricao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Preco" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="PedidoLinhas" Relationship="Self.FK_PedidoLinha_Produto" FromRole="Produto" ToRole="PedidoLinha" />
+  </EntityType>
+  <Association Name="FK_PedidoLinha_Pedido">
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+    <End Role="PedidoLinha" Type="Self.PedidoLinha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PedidoLinha">
+        <PropertyRef Name="PedidoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PedidoLinha_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="PedidoLinha" Type="Self.PedidoLinha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PedidoLinha">
+        <PropertyRef Name="ProdutoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VerityEntidades" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Pedidoes" EntityType="Self.Pedido" />
+    <EntitySet Name="PedidoLinhas" EntityType="Self.PedidoLinha" />
+    <EntitySet Name="Produtoes" EntityType="Self.Produto" />
+    <AssociationSet Name="FK_PedidoLinha_Pedido" Association="Self.FK_PedidoLinha_Pedido">
+      <End Role="Pedido" EntitySet="Pedidoes" />
+      <End Role="PedidoLinha" EntitySet="PedidoLinhas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PedidoLinha_Produto" Association="Self.FK_PedidoLinha_Produto">
+      <End Role="Produto" EntitySet="Produtoes" />
+      <End Role="PedidoLinha" EntitySet="PedidoLinhas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://servicos.verity.com/1.0" elementFormDefault="qualified" targetNamespace="http://servicos.verity.com/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/LojaVerityServicos/PedidosServico.svc?xsd=xsd2" namespace="http://servicos.verity.com/1.0/Entidades" />
+  <xs:element name="CriarPedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://servicos.verity.com/1.0/Entidades" minOccurs="0" name="pedido" nillable="true" type="q1:Pedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriarPedidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://servicos.verity.com/1.0/Entidades" minOccurs="0" name="CriarPedidoResult" nillable="true" type="q2:Pedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarPedidos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarPedidosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://servicos.verity.com/1.0/Entidades" minOccurs="0" name="BuscarPedidosResult" nillable="true" type="q3:ArrayOfPedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarPedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarPedidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://servicos.verity.com/1.0/Entidades" minOccurs="0" name="BuscarPedidoResult" nillable="true" type="q4:Pedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

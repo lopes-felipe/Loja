@@ -1,0 +1,1 @@
+﻿var lojaServicosUrl = "http://localhost/LojaVerityServicos";

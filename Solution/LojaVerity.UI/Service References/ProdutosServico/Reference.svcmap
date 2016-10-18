@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="61749035-da5d-48d7-bafb-29cc627ea37d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/LojaVerityServicos/ProdutosServico.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProdutosServico.wsdl" MetadataType="Wsdl" ID="1a08e31a-b959-4374-adb9-c13fb5bc5eef" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/ProdutosServico.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ProdutosServico1.wsdl" MetadataType="Wsdl" ID="cfd5accb-8372-49e1-b0b8-1e858f67dbeb" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/ProdutosServico.svc?wsdl" />
+    <MetadataFile FileName="ProdutosServico.xsd" MetadataType="Schema" ID="9aac570d-0b8a-4dda-9363-505b94a54f37" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/ProdutosServico.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProdutosServico1.xsd" MetadataType="Schema" ID="a1594873-5b32-48f2-9f65-82d17a900b32" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/ProdutosServico.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProdutosServico.disco" MetadataType="Disco" ID="322e494c-09b6-4ab2-953c-2203ed29d15f" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/ProdutosServico.svc?disco" />
+    <MetadataFile FileName="ProdutosServico2.xsd" MetadataType="Schema" ID="ac0a9023-d4dd-46bd-afd9-7fdc1baf15f8" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/ProdutosServico.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

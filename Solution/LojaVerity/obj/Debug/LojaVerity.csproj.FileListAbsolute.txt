@@ -1,0 +1,9 @@
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\bin\Debug\LojaVerity.dll.config
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\bin\Debug\LojaVerity.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\bin\Debug\LojaVerity.pdb
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\bin\Debug\EntityFramework.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\bin\Debug\EntityFramework.xml
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\obj\Debug\LojaVerity.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity\obj\Debug\LojaVerity.pdb

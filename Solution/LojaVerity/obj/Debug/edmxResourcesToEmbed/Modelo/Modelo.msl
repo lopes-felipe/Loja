@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VerityModeloStoreContainer" CdmEntityContainer="VerityEntidades">
+    <EntitySetMapping Name="Pedidoes">
+      <EntityTypeMapping TypeName="VerityModelo.Pedido">
+        <MappingFragment StoreEntitySet="Pedido">
+          <ScalarProperty Name="DataPedido" ColumnName="DataPedido" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="PrecoTotal" ColumnName="PrecoTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PedidoLinhas">
+      <EntityTypeMapping TypeName="VerityModelo.PedidoLinha">
+        <MappingFragment StoreEntitySet="PedidoLinha">
+          <ScalarProperty Name="Preco" ColumnName="Preco" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PedidoID" ColumnName="PedidoID" />
+          <ScalarProperty Name="ProdutoID" ColumnName="ProdutoID" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produtoes">
+      <EntityTypeMapping TypeName="VerityModelo.Produto">
+        <MappingFragment StoreEntitySet="Produto">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Preco" ColumnName="Preco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

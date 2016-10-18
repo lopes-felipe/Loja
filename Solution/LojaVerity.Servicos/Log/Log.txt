@@ -1,0 +1,14 @@
+ProdutosServico::BuscarProduto - 
+Erro: ID inválido.. Callstack:    at LojaVerity.Servicos.ProdutosServico.BuscarProduto(String id) in c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\ProdutosServico\ProdutosServico.cs:line 62.
+.
+ProdutosServico::BuscarProdutos - 
+Erro: ID inválido.. Callstack:    at LojaVerity.Servicos.PedidosServico.BuscarPedido(String id) in c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\PedidosServico\PedidosServico.cs:line 110.
+.
+ProdutosServico::BuscarProdutos - ID: x - 
+Erro: ID inválido.. Callstack:    at LojaVerity.Servicos.PedidosServico.BuscarPedido(String id) in c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\PedidosServico\PedidosServico.cs:line 110.
+.
+ProdutosServico::BuscarProdutos - ID: x - Erro: ID inválido.. 
+Callstack:    at LojaVerity.Servicos.PedidosServico.BuscarPedido(String id) in c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\PedidosServico\PedidosServico.cs:line 110.
+.
+ProdutosServico::BuscarProdutos - ID: x - Código: 20002. Erro: ID inválido.. Callstack:    at LojaVerity.Servicos.PedidosServico.BuscarPedido(String id) in c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\PedidosServico\PedidosServico.cs:line 110.
+.

@@ -1,0 +1,12 @@
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\obj\Debug\LojaVerity.Servicos.csprojResolveAssemblyReference.cache
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\LojaVerity.Servicos.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\LojaVerity.Servicos.pdb
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\LojaVerity.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\EntityFramework.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\LojaVerity.pdb
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\EntityFramework.xml
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\obj\Debug\LojaVerity.Servicos.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\obj\Debug\LojaVerity.Servicos.pdb
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Servicos\bin\Debug\LojaVerity.Servicos.dll.config

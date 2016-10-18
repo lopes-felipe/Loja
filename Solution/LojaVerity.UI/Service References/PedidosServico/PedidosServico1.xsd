@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://servicos.verity.com/1.0/Entidades" elementFormDefault="qualified" targetNamespace="http://servicos.verity.com/1.0/Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Pedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataPedido" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Linhas" nillable="true" type="tns:ArrayOfPedidoLinha" />
+      <xs:element minOccurs="0" name="PrecoTotal" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pedido" nillable="true" type="tns:Pedido" />
+  <xs:complexType name="ArrayOfPedidoLinha">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PedidoLinha" nillable="true" type="tns:PedidoLinha" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPedidoLinha" nillable="true" type="tns:ArrayOfPedidoLinha" />
+  <xs:complexType name="PedidoLinha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="PedidoID" type="xs:long" />
+      <xs:element minOccurs="0" name="Preco" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProdutoID" type="xs:long" />
+      <xs:element minOccurs="0" name="Quantidade" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PedidoLinha" nillable="true" type="tns:PedidoLinha" />
+  <xs:complexType name="ArrayOfPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pedido" nillable="true" type="tns:Pedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPedido" nillable="true" type="tns:ArrayOfPedido" />
+</xs:schema>

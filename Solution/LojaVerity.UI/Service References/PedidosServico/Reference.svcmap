@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2e4c5cc0-10c2-42a4-af18-165657de1fb5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/LojaVerityServicos/PedidosServico.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PedidosServico.xsd" MetadataType="Schema" ID="d4eaa6ef-6917-43d2-a723-9ccdcb05cdcf" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/PedidosServico.svc?xsd=xsd0" />
+    <MetadataFile FileName="PedidosServico.wsdl" MetadataType="Wsdl" ID="08a69c37-8eaf-45d7-bf97-2d42fdc44ffd" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/PedidosServico.svc?wsdl" />
+    <MetadataFile FileName="PedidosServico1.wsdl" MetadataType="Wsdl" ID="44188dd0-cfac-44ac-b018-11bc462b5fb7" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/PedidosServico.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="PedidosServico1.xsd" MetadataType="Schema" ID="633d3c16-a5a4-4d47-8611-232ee87a0ed4" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/PedidosServico.svc?xsd=xsd2" />
+    <MetadataFile FileName="PedidosServico.disco" MetadataType="Disco" ID="cd96a0b5-a1ce-46fb-b289-af9db0d8ce40" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/PedidosServico.svc?disco" />
+    <MetadataFile FileName="PedidosServico2.xsd" MetadataType="Schema" ID="cf49c763-4bd3-4d3c-a566-89cc1a6465c8" SourceId="1" SourceUrl="http://localhost/LojaVerityServicos/PedidosServico.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

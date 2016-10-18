@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VerityModelo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Pedido">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cliente" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="PrecoTotal" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DataPedido" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PedidoLinha">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PedidoID" Type="bigint" Nullable="false" />
+    <Property Name="ProdutoID" Type="bigint" Nullable="false" />
+    <Property Name="Quantidade" Type="int" Nullable="false" />
+    <Property Name="Preco" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Preco" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_PedidoLinha_Pedido">
+    <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
+    <End Role="PedidoLinha" Type="Self.PedidoLinha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PedidoLinha">
+        <PropertyRef Name="PedidoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PedidoLinha_Produto">
+    <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+    <End Role="PedidoLinha" Type="Self.PedidoLinha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PedidoLinha">
+        <PropertyRef Name="ProdutoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VerityModeloStoreContainer">
+    <EntitySet Name="Pedido" EntityType="Self.Pedido" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PedidoLinha" EntityType="Self.PedidoLinha" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_PedidoLinha_Pedido" Association="Self.FK_PedidoLinha_Pedido">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="PedidoLinha" EntitySet="PedidoLinha" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PedidoLinha_Produto" Association="Self.FK_PedidoLinha_Produto">
+      <End Role="Produto" EntitySet="Produto" />
+      <End Role="PedidoLinha" EntitySet="PedidoLinha" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

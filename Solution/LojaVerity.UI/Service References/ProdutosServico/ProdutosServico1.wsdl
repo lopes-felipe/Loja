@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://servicos.verity.com/1.0" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProdutosServico" targetNamespace="http://servicos.verity.com/1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/LojaVerityServicos/ProdutosServico.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://servicos.verity.com/1.0/Imports">
+      <xsd:import schemaLocation="http://localhost/LojaVerityServicos/ProdutosServico.svc?xsd=xsd0" namespace="http://servicos.verity.com/1.0" />
+      <xsd:import schemaLocation="http://localhost/LojaVerityServicos/ProdutosServico.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/LojaVerityServicos/ProdutosServico.svc?xsd=xsd2" namespace="http://servicos.verity.com/1.0/Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProdutosServico_BuscarProdutos_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarProdutos" />
+  </wsdl:message>
+  <wsdl:message name="IProdutosServico_BuscarProdutos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarProdutosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProdutosServico_BuscarProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarProduto" />
+  </wsdl:message>
+  <wsdl:message name="IProdutosServico_BuscarProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProdutosServico_ExcluirProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirProduto" />
+  </wsdl:message>
+  <wsdl:message name="IProdutosServico_ExcluirProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirProdutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProdutosServico_CadastrarProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarProduto" />
+  </wsdl:message>
+  <wsdl:message name="IProdutosServico_CadastrarProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CadastrarProdutoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProdutosServico">
+    <wsdl:operation name="BuscarProdutos">
+      <wsdl:input wsaw:Action="http://servicos.verity.com/1.0/IProdutosServico/BuscarProdutos" message="tns:IProdutosServico_BuscarProdutos_InputMessage" />
+      <wsdl:output wsaw:Action="http://servicos.verity.com/1.0/IProdutosServico/BuscarProdutosResponse" message="tns:IProdutosServico_BuscarProdutos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarProduto">
+      <wsdl:input wsaw:Action="http://servicos.verity.com/1.0/IProdutosServico/BuscarProduto" message="tns:IProdutosServico_BuscarProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://servicos.verity.com/1.0/IProdutosServico/BuscarProdutoResponse" message="tns:IProdutosServico_BuscarProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirProduto">
+      <wsdl:input wsaw:Action="http://servicos.verity.com/1.0/IProdutosServico/ExcluirProduto" message="tns:IProdutosServico_ExcluirProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://servicos.verity.com/1.0/IProdutosServico/ExcluirProdutoResponse" message="tns:IProdutosServico_ExcluirProduto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarProduto">
+      <wsdl:input wsaw:Action="http://servicos.verity.com/1.0/IProdutosServico/CadastrarProduto" message="tns:IProdutosServico_CadastrarProduto_InputMessage" />
+      <wsdl:output wsaw:Action="http://servicos.verity.com/1.0/IProdutosServico/CadastrarProdutoResponse" message="tns:IProdutosServico_CadastrarProduto_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProdutosServico" type="tns:IProdutosServico">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscarProdutos">
+      <soap:operation soapAction="http://servicos.verity.com/1.0/IProdutosServico/BuscarProdutos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarProduto">
+      <soap:operation soapAction="http://servicos.verity.com/1.0/IProdutosServico/BuscarProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirProduto">
+      <soap:operation soapAction="http://servicos.verity.com/1.0/IProdutosServico/ExcluirProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CadastrarProduto">
+      <soap:operation soapAction="http://servicos.verity.com/1.0/IProdutosServico/CadastrarProduto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProdutosServico">
+    <wsdl:port name="BasicHttpBinding_IProdutosServico" binding="tns:BasicHttpBinding_IProdutosServico">
+      <soap:address location="http://localhost/LojaVerityServicos/ProdutosServico.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

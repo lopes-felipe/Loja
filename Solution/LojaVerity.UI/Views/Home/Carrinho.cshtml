@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Público";
+}
+
+@using LojaVerity.UI.Models
+@model Pedido
+
+<h2>Carrinho</h2>
+
+@Html.ValidationSummary()
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Quantidade</th>
+            <th>Produto</th>
+            <th class="text-right">Preço</th>
+            <th class="text-right">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (PedidoLinha linha in Model.Linhas)
+        {
+            using (Html.BeginForm("RemoverCarrinho", "Home"))
+            {
+                @Html.Hidden("ProdutoID", linha.Produto.ID)
+                <tr>
+                    <td class="text-center">@linha.Quantidade</td>
+                    <td class="text-left">@linha.Produto.Nome</td>
+                    <td class="text-right">@linha.Produto.Preco.ToString("N2")</td>
+                    <td class="text-right">R$ @((linha.Quantidade * linha.Produto.Preco).ToString("N2"))</td>
+                    <td><input class="btn btn-sm btn-warning" type="submit" value="Remover" /></td>
+                </tr>
+            }
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">R$ @Model.CalcularValorTotal()</td>
+        </tr>
+    </tfoot>
+</table>
+
+@using (Html.BeginForm("FecharPedido", "Home"))
+{
+    <div class="form-group">
+        <label>Cliente</label>
+        @Html.TextBox("Cliente", null, new { @class = "form-control" })
+    </div>
+
+    <div class="text-center">
+        @Html.ActionLink("Continuar compras", "Index", null, new { @class = "btn btn-primary" });
+        <button class="btn btn-success">Fechar pedido</button>
+    </div>
+}

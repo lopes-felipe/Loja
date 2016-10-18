@@ -1,0 +1,1 @@
+﻿<%@ Application CodeBehind="Global.asax.cs" Inherits="LojaVerity.Servicos.Global" Language="C#" %>

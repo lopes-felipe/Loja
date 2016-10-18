@@ -1,0 +1,14 @@
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\obj\Debug\LojaVerity.Teste.csprojResolveAssemblyReference.cache
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\LojaVerity.Teste.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\LojaVerity.Teste.pdb
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\LojaVerity.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\EntityFramework.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\LojaVerity.pdb
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\EntityFramework.xml
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\obj\Debug\LojaVerity.Teste.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\obj\Debug\LojaVerity.Teste.pdb
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\LojaVerity.Teste.dll.config
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\felipe.lopes\documents\visual studio 2015\Projects\Verity\LojaVerity.Teste\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml

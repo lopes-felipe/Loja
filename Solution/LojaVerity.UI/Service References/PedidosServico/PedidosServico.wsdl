@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://servicos.verity.com/1.0" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PedidosServico" targetNamespace="http://servicos.verity.com/1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/LojaVerityServicos/PedidosServico.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://servicos.verity.com/1.0/Imports">
+      <xsd:import schemaLocation="http://localhost/LojaVerityServicos/PedidosServico.svc?xsd=xsd0" namespace="http://servicos.verity.com/1.0" />
+      <xsd:import schemaLocation="http://localhost/LojaVerityServicos/PedidosServico.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/LojaVerityServicos/PedidosServico.svc?xsd=xsd2" namespace="http://servicos.verity.com/1.0/Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPedidosServico_CriarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:CriarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IPedidosServico_CriarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CriarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidosServico_BuscarPedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPedidos" />
+  </wsdl:message>
+  <wsdl:message name="IPedidosServico_BuscarPedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPedidosServico_BuscarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IPedidosServico_BuscarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPedidosServico">
+    <wsdl:operation name="CriarPedido">
+      <wsdl:input wsaw:Action="http://servicos.verity.com/1.0/IPedidosServico/CriarPedido" message="tns:IPedidosServico_CriarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://servicos.verity.com/1.0/IPedidosServico/CriarPedidoResponse" message="tns:IPedidosServico_CriarPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPedidos">
+      <wsdl:input wsaw:Action="http://servicos.verity.com/1.0/IPedidosServico/BuscarPedidos" message="tns:IPedidosServico_BuscarPedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://servicos.verity.com/1.0/IPedidosServico/BuscarPedidosResponse" message="tns:IPedidosServico_BuscarPedidos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPedido">
+      <wsdl:input wsaw:Action="http://servicos.verity.com/1.0/IPedidosServico/BuscarPedido" message="tns:IPedidosServico_BuscarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://servicos.verity.com/1.0/IPedidosServico/BuscarPedidoResponse" message="tns:IPedidosServico_BuscarPedido_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPedidosServico" type="tns:IPedidosServico">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CriarPedido">
+      <soap:operation soapAction="http://servicos.verity.com/1.0/IPedidosServico/CriarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPedidos">
+      <soap:operation soapAction="http://servicos.verity.com/1.0/IPedidosServico/BuscarPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarPedido">
+      <soap:operation soapAction="http://servicos.verity.com/1.0/IPedidosServico/BuscarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PedidosServico">
+    <wsdl:port name="BasicHttpBinding_IPedidosServico" binding="tns:BasicHttpBinding_IPedidosServico">
+      <soap:address location="http://localhost/LojaVerityServicos/PedidosServico.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

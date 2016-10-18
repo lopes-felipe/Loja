@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Público";
+}
+
+@using LojaVerity.UI.Models;
+@model IEnumerable<Produto>
+
+<h2>Produtos</h2>
+
+<div>
+    @foreach (Produto produto in Model)
+    {
+        using (Html.BeginForm("AdicionarCarrinho", "Home"))
+        {
+            @Html.Hidden("produtoID", produto.ID)
+            <div class="well">
+                <h3>
+                    <strong>@produto.Nome</strong>
+                    <span class="pull-right label label-primary">R$ @produto.Preco.ToString("N2")</span>
+                </h3>
+                <span class="lead">@produto.Descricao</span>
+                <div class="pull-right">
+                    <button class="btn btn-success">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        }
+    }
+</div>

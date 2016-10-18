@@ -1,0 +1,55 @@
+1. Instalação e configuração
+
+1.1. Web Service
+- Compilar projeto LojaVerity.Servicos;
+- Copiar os arquivos PedidosServico.svc, ProdutosServico.svc, Global.asax, Web.config e o diretório bin, no local de instalação desejado;
+- No diretório de instalação, copiar os arquivos da pasta bin>Debug para o diretório bin;
+- No IIS, criar um Application com um application pool .NET 4.0, referenciando ao diretório definido no passo anterior;
+
+1.1.1. Habilitando log
+- No diretório raiz da instalação do serviço, criar diretório de nome "Log";
+- No Web.config, descomentar as seções <switches> e <trace> do <system.diagnostics>;
+- Dar permissão de leitura e escrita para o usuário do aplication pool da aplicação, no diretório "Log";
+
+1.1.2. Habilitando método HTTP DELETE
+- Dependendo do servidor no qual a aplicação será instalada, poderá ser necessária uma configuração extra no IIS da máquina, a fim de permitir o método HTTP DELETE. Para confirmação de necessidade e correta configuração, seguir os passos:
+	- Abrir o IIS Manager;
+	- Dentro das configurações do IIS do servidor, ir na opção Handler Mappings;
+	- Na lista de handlers, editar o de nome "ExtensionlessUrlHandler-Integrated-4.0";
+	- Ao abrir a janela de configurações, clicar no botão "Request Restrictions" e ir na aba Verbs;
+	- Caso a opção "All verbs" esteja selecionada ou o método "DELETE" já esteja na lista, não é necessário realizar nenhuma configuração;
+	- Caso contrário, é preciso incluir o trecho ",DELETE" ao final da lista existente e clicar em OK;
+
+1.2. UI
+- Compilar projeto LojaVerity.UI;
+- Copiar os arquivos Global.asax e Web.config, e os diretórios bin, Content, fonts, Scripts e Views no local de instalação desejado;
+- No IIS, criar um Application com um application pool .NET 4.0, referenciando ao diretório definido no passo anterior;
+
+2. Criando modelo de dados
+- Rodar script "Loja Verity - Modelo de Dados.sql" (Verity\Database\Loja Verity - Modelo de Dados.sql), no banco de dados de nome "Verity";
+
+2.1. Configurando conexão SQLServer
+- No arquivo Web.config do Web Services, alterar os valores das propriedades "Data source", "User ID" e "Password", da connection string "VerityEntidades";
+
+3. Lista de tecnologias usadas e suas respectivas versões:
+- .NET Framework 4.5;
+- Asp.Net MVC 5.2.3;
+- WCF;
+- SqlServer 2012 (porém modelo de dados compatível com versões anteriores);
+- Entity Framework 6.1.3 - Database First;
+- jQuery 1.10.2
+- Bootstrap 3.0;
+- KnockoutJS 3.4.0;
+- Ninject 3.2.2;
+
+4. Comentários
+- Apesar de ter sido possível cumprir todos os requisitos funcionais, devido ao tempo de dois dias que me foi possível dispor para trabalho na solução, acredito que ainda haviam aperfeiçoamentos que poderiam ser feitos na aplicação. Abaixo listo alguns:
+	- Maior distribuição de logs por entre as operações das aplicações;
+	- Maior quantidade de Unit Tests, com maior cobertura de métodos e cenários;
+	- Maior número de comentários, incluindo comentários de documentação (<summary>);
+	- Melhor tratamento de erros, com Filters e Handlers;
+
+- Para fins de exemplificação, implementei o WS de forma "híbrida", para que possa ser consumido tanto via REST quanto via SOAP. 
+- Também utilizei duas abordagens distintas de implementação na aplicação UI, sendo elas:
+	- Na seção administrativa, realizei uma implementação mais voltada ao client-side, onde toda a lógica de consumo do WS e exibição das Views é feita via javascript (Knockout + jQuery), utilizando AJAX. Nesta abordagem o WS é consumido via REST/JSON;
+	- Já na seção pública, utilizei uma abordagem mais voltada para sever-side, onde o interfaceamento com o WS e as lógicas de exibição das Views são efetuadas pelo próprio Controller. Nesta abordagem o WS é consumido via SOAP/XML;

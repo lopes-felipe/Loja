@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+
+@section Scripts
+{
+    <script type="text/javascript" >
+        $(document).ready(function () {
+            buscarProdutos();
+        })
+
+        var mostrarViewProdutos = function () {
+            modelo.viewAtual('Produtos');
+        }
+    </script>    
+}
+
+<div class="alert alert-danger text-center" data-bind="visible: modelo.temErro(), text: modelo.erro()" ></div>
+
+<div data-bind="visible: modelo.viewAtual() == 'Produtos'">
+    @Html.Partial("Produtos")
+</div>
+
+<div data-bind="visible: modelo.viewAtual() == 'CadastrarProduto'">
+    @Html.Partial("CadastrarProduto")
+</div>

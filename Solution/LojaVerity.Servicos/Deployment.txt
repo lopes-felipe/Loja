@@ -1,0 +1,7 @@
+﻿Dependendo do servidor no qual a aplicação será instalada, pode ser necessária uma configuração extra no IIS da máquina, à fim de permitir o método HTTP DELETE. Para confirmação, seguir os passos:
+	1. Abrir IIS Manager;
+	2. Dentro das configurações do IIS do servidor, ir na opção Handler Mappings;
+	3. Na lista de handlers, editar o de nome "ExtensionlessUrlHandler-Integrated-4.0";
+	4. Ao abrir a janela de configurações, clicar no botão "Request Restrictions" e ir na aba Verbs;
+	5. Caso a opção "All verbs" esteja selecionada ou o método "DELETE" já esteja na lista, não é necessário realizar nenhuma configuração;
+	6. Caso contrário, é preciso incluir o trecho ",DELETE" ao final da lista existente e clicar em OK;
